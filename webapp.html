@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivation Match</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        select, button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px;
+        }
+        .quote-box {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="scratch.html">← Back to Scratch Page</a></p>
+    <h1>Motivation Match</h1>
+    <p>How are you feeling?</p>
+    <select id="moodSelect">
+        <option value="">-- Select Mood --</option>
+        <option value="tired">Tired</option>
+        <option value="motivated">Motivated</option>
+        <option value="anxious">Anxious</option>
+        <option value="happy">Happy</option>
+    </select>
+    <button onclick="getQuote()">Get Quote</button>
+
+    <div class="quote-box" id="quoteBox"></div>
+
+    <script>
+        const quotes = {
+            tired: {
+                quote: "Rest if you must, but don’t you quit.",
+                color: "#444",
+                background: "#e0e0e0"
+            },
+            motivated: {
+                quote: "The future depends on what you do today.",
+                color: "#ffffff",
+                background: "#0077b6"
+            },
+            anxious: {
+                quote: "You don’t have to control your thoughts. You just have to stop letting them control you.",
+                color: "#ffffff",
+                background: "#4a4e69"
+            },
+            happy: {
+                quote: "Happiness is not something ready-made. It comes from your own actions.",
+                color: "#000000",
+                background: "#f9c74f"
+            }
+        };
+
+        function getQuote() {
+            const mood = document.getElementById("moodSelect").value;
+            const box = document.getElementById("quoteBox");
+            if (mood && quotes[mood]) {
+                const q = quotes[mood];
+                box.textContent = `"${q.quote}"`;
+                document.body.style.backgroundColor = q.background;
+                document.body.style.color = q.color;
+            } else {
+                box.textContent = "Please select a mood!";
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>

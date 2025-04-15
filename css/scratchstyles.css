@@ -1,0 +1,50 @@
+body {
+    background-color: #fff8f0;
+    font-family: 'Arial', sans-serif;
+    color: #222;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid #ff4500;
+}
+
+#top {
+    text-decoration: underline;
+    font-size: 36px;
+    color: #d35400;
+}
+
+p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.emphasizedText {
+    font-style: italic;
+    color: #2c3e50;
+}
+
+.centered-list {
+    padding-left: 0;
+    list-style-position: outside;
+    margin: 0 auto;
+    display: table;
+    text-align: left;
+}
+
+.content-block {
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fef5e7;
+    border-radius: 15px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+
+#top-section {
+    background-image: url("../images/hoop-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: white;
+}
